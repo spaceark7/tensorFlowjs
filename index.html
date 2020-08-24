@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <Title>Video Image Recognition</Title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="favicon.png">
+     <!-- Load the latest version of TensorFlow.js -->
+     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  </head>
+  
+  <body>
+
+    <header>
+      <div class="head-block">
+      <h1>Image Recognition dari Video!</h1>
+      <p>Web Sederhana untuk mengetes kemampuan dari TensorFlow.js</p>
+      </div>
+
+      <nav>
+        <ul>
+            <li><a href="#panel-prediksi">Hasil Prediksi</a></li>
+            <li><a href="#historyList">Riwayat Prediksi</a></li>
+        </ul>
+    </nav>
+  </header>
+
+    <main>
+    <div id="display">
+      <article class="card">
+      <video id="video" src="japan.mp4" autoplay muted playsinline controls ></video>
+      <canvas id="canvas" style="display: none;" width="500px" height="500px"></canvas>
+     
+      <input type="file" id="myFile" accept="video/*">
+      <button type="submit" onclick="uploadFunc()">Upload</button>
+    
+    </article>
+
+   
+
+      <article id="panel-prediksi" class="card">
+
+        <h2>Hasil Prediksi</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Prediksi</th>
+              <th>Probabilitas</th>
+            </tr>
+            <tr>
+              <th id="status"> Waiting </th>
+              <th id="probabilitas"> Waiting </th>
+            </tr>
+          </thead>
+        </table>
+    </article>
+
+    <article class="history card">
+      <h2>Riwayat Prediksi</h2>
+      <table>
+          <thead>
+              <tr>
+                  <th>Hasil Prediksi</th>
+                  <th>Hasil probabilitas</th>
+              </tr>
+          </thead>
+          <tbody id="historyList"></tbody>
+      </table>
+    </article>
+
+    </div>
+
+  
+
+    <aside>
+      <article class="profile">
+        <header>
+            <img src="profile_photo.png" alt="profile_photo"> 
+            <h2>Profile</h2>
+            <p>Hasbi Assidiki</p>
+        </header>
+      </article>
+
+       
+    </header>
+    <section>
+    <h3>Informasi Lainnya</h3>
+    <table>
+        <tr>
+        <th>Alamat</th>
+        <td>Cianjur</td>
+         </tr>
+        <tr>
+        <th>Pekerjaan</th>
+        <td>Digital Marketing & IT Support</td>
+        </tr>
+        
+    </table>
+    </section>
+</article> 
+    </aside>
+    
+    <script src="storage.js"></script>
+    <script src="index.js"></script>
+
+  </main>
+
+  
+  <footer>
+    <p>Powered by TensorFlow.js</p>
+    <p>Tugas Submisi Dicoding</p>
+
+  </footer>
+  </body>
+
+
+
+</html>
